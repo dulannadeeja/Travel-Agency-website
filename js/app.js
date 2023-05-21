@@ -39,9 +39,67 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
     console.log("down");
   } else {
-    header.classList.add("active");
     console.log("up");
+    header.classList.add("active");
+    navMenu.classList.remove("active");
+    collapseBtn.innerHTML = `<ion-icon name="menu-sharp"></ion-icon>`;
   }
 
   prevScrollPos = currentScrollPos;
 });
+
+// reanimate header when resize
+window.addEventListener("resize", function () {
+  header.classList.remove("active");
+  header.style.animation = "none";
+  requestAnimationFrame(function () {
+    header.style.animation = "";
+  });
+  header.classList.add("active");
+});
+
+// restart animations when element is in viewport
+// Define the options for the Intersection Observer
+const options = {
+  root: null, // Use the viewport as the root
+  rootMargin: "0px",
+  threshold: 0.5, // Trigger when at least 50% of the element is visible
+};
+
+// Create a new Intersection Observer
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      // Add the "animate" class when the element comes into the viewport
+      requestAnimationFrame(() => {
+        entry.target.style.animation = "";
+        console.log("animate");
+      });
+    } else {
+      // Remove the "animate" class when the element goes out of the viewport
+      requestAnimationFrame(() => {
+        entry.target.style.animation = "none";
+        console.log("none");
+      });
+    }
+  });
+}, options);
+
+// Get the element to observe
+const elements = document.querySelector("#animate");
+
+// Start observing the element
+observer.observe(elements);
+
+// scroll to top button
+
+// const scrollBtn = document.querySelector(".scrollToTop-btn");
+
+// window.addEventListener("scroll", function () {
+//   scrollBtn.classList.toggle("active", window.scrollY > 500);
+// });
+
+// scrollBtn.addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
