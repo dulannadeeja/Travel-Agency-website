@@ -825,7 +825,7 @@ body {
     gap: 2em;
     align-items: center;
     justify-content: center;
-    padding: 2em 4em;
+    padding: 4em 3em;
     background-color: var(--light-color-variation);
 }
 
