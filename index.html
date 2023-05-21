@@ -64,7 +64,7 @@
     <main>
       <!-- start hero section -->
       <section
-        class="hero-section"
+        class="hero-section scroll-snap"
         style="background-image: url('./images/hero-bg.jpg')"
       >
         <div class="container">
@@ -114,7 +114,7 @@
       <!-- end hero section -->
 
       <!-- start service section -->
-      <section class="service-section">
+      <section class="service-section scroll-snap">
         <div class="container">
           <h2 class="section-title">WHAT WE SERVE</h2>
           <ul class="service-cards">
@@ -168,7 +168,7 @@
       <!-- end what we serve section -->
 
       <!-- start top destinations section -->
-      <section class="destinations-section">
+      <section class="destinations-section scroll-snap">
         <div class="container">
           <h2 class="section-title">Top Destinations</h2>
           <p class="section-desc">Explore top destinations</p>
@@ -290,7 +290,7 @@
       <!-- end top destinations section -->
 
       <!-- start our experiance section -->
-      <section class="experiance-section">
+      <section class="experiance-section scroll-snap">
         <div class="container">
           <h2 class="section-title">Our Experience</h2>
           <div class="experiance-section-desc">
@@ -331,7 +331,7 @@
       <!-- end our experiance section -->
 
       <!-- start photo gallery -->
-      <section class="gallery-section">
+      <section class="gallery-section scroll-snap">
         <div class="container">
           <h2 class="section-title">Photo Gallery</h2>
           <h3 class="gallery-section-desc">Explore Our Photo Gallery</h3>
@@ -351,7 +351,7 @@
       <!-- end photo gallery -->
 
       <!-- get started section -->
-      <section class="get-started-section">
+      <section class="get-started-section scroll-snap">
         <div class="container">
           <h2 class="section-title">Get Started</h2>
           <div class="card card-cta">
@@ -361,7 +361,9 @@
               <span>icon</span>
             </h3>
             <p>We Are Always Ready to Serve You the Best</p>
-            <button class="btn btn-primary btn-cta">Get Started<ion-icon name="chevron-forward-sharp"></ion-icon></button>
+            <button class="btn btn-primary btn-cta">
+              Get Started<ion-icon name="chevron-forward-sharp"></ion-icon>
+            </button>
           </div>
         </div>
       </section>
@@ -369,68 +371,82 @@
     </main>
 
     <!-- start footer section -->
-    <footer>
-      <div class="footer-brand">
-        <img src="./images/logo.svg" alt="travelDairy logo" />
-        <p>
-          We always make happy stories for our clients by providing as many
-          choices as possible.
-        </p>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul>
-      </div>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-brand card">
+          <div class="img-wrapper">
+            <img src="./images/logo.svg" alt="travelDairy logo" />
+          </div>
+          <p class="text-area">
+            We always make happy stories for our clients by providing as many
+            choices as possible.
+          </p>
+          <ul class="social-profiles-list">
+            <li class="social-profile-item">
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li class="social-profile-item">
+              <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            </li>
+            <li class="social-profile-item">
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li class="social-profile-item">
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="footer-about">
-        <h3>About Us</h3>
-        <ul>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Our Services</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Our Blog</a></li>
-        </ul>
-      </div>
+        <div class="footer-about">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Our Blog</a></li>
+          </ul>
+        </div>
 
-      <div class="footer-company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Site Map</a></li>
-        </ul>
-      </div>
+        <div class="footer-company">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Site Map</a></li>
+          </ul>
+        </div>
 
-      <div class="footer-support">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Help Desk</a></li>
-          <li><a href="#">Forums</a></li>
-          <li><a href="#">Live Chat</a></li>
-        </ul>
-      </div>
+        <div class="footer-support">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Desk</a></li>
+            <li><a href="#">Forums</a></li>
+            <li><a href="#">Live Chat</a></li>
+          </ul>
+        </div>
 
-      <div class="footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Subscribe to our newsletter to get the latest news and offers</p>
-        <form action="">
-          <input type="email" placeholder="Enter your email" />
-          <button>Subscribe</button>
-        </form>
-      </div>
+        <div class="footer-newsletter card">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter to get the latest news and offers</p>
+          <form action="">
+            <input type="email" placeholder="Enter your email" />
+            <button class="btn btn-primary"><ion-icon name="send"></ion-icon></button>
+          </form>
+        </div>
 
-      <div class="footer-bottom">
-        <p>
-          © 2023 travelDairy. All rights reserved. Made with love by
-          <a href="#" target="_blank">dulbay</a>
-        </p>
-        <span>
-          <a href="#">Terms and Conditions</a>
-          <a href="#">Privacy Policy</a>
-        </span>
+        <div class="footer-bottom">
+          <p>
+            © 2023 travelDairy. All rights reserved. Made with love by
+            <a href="#" target="_blank">dulbay</a>
+          </p>
+          <span>
+            <a href="#">Terms and Conditions</a>
+            <span> | </span>
+            <a href="#">Privacy Policy</a>
+          </span>
+        </div>
       </div>
     </footer>
     <!-- end footer section -->
